@@ -1,4 +1,4 @@
-# playground-setup
+# Oxylabs Web Scraper API Scheduler
 
 ## Requirements
 
