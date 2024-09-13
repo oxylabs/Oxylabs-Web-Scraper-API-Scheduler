@@ -1,0 +1,11 @@
+{
+  "source": "universal",
+  "geo_location": "United States",
+  "user_agent_type": "desktop",
+  "context": [
+    {
+      "key": "follow_redirects",
+      "value": true
+    }
+  ]
+}
