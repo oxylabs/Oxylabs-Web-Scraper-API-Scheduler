@@ -1,4 +1,4 @@
-# playground-setup
+# Oxylabs Web Scraper API Scheduler
 
 ## Requirements
 
@@ -42,7 +42,7 @@
 The only thing you need to set it up is to prepare a list of URLs and payload of Scraper API parameters which can be generated in our playground. Below you will find general steps to run our Scraper API and a few examples of different options you have to run it.
 
 Steps:
-1. Generate payload by describing your scraping needs in Oxy playground (https://dashboard.oxylabs.io/en/api-playground).
+1. Generate payload by describing your scraping needs in Oxy playground (https://dashboard.oxylabs.io/?route=/api-playground).
 2. Copy payload and store it either in `runtime_files/payload.json` or as a new file on your device.
 ![img_4.png](images/img_4.png)
 3. Store URLs you wish to scrape in `runtime_files/urls.txt` or as a new file on your device. Each url must be separated by newline.
@@ -76,7 +76,7 @@ We do support only AWS S3 or Google Cloud Storage for now.
    python3.9 run.py
    ```
 2. When asked `Select where you wish to store the results.` enter `2` to choose `Cloud`.
-3. When asked `Path to cloud bucket and directory/partition where results should be stored:` enter path to your cloud directory where completed jobs should be stored. Bucket permissions should be adjust by using these instructions - https://developers.oxylabs.io/scraper-apis/serp-scraper-api/features/cloud-storage.
+3. When asked `Path to cloud bucket and directory/partition where results should be stored:` enter path to your cloud directory where completed jobs should be stored. Bucket permissions should be adjust by using these instructions - https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/cloud-storage.
 4. When asked `Do you want to schedule urls to be scraped repetitively?(y/n)` enter `n` as now we just want to scrape all URLs once.
 
 *Image of wizard for reference*
@@ -89,7 +89,7 @@ We do support only AWS S3 or Google Cloud Storage for now.
    python3.9 run.py
    ```
 2. When asked `Select where you wish to store the results.` enter `2` to choose `Cloud`.
-3. When asked `Path to cloud bucket and directory/partition where results should be stored:` enter path to your cloud directory where completed jobs should be stored. Bucket permissions should be adjust by using these instructions - https://developers.oxylabs.io/scraper-apis/serp-scraper-api/features/cloud-storage.
+3. When asked `Path to cloud bucket and directory/partition where results should be stored:` enter path to your cloud directory where completed jobs should be stored. Bucket permissions should be adjust by using these instructions - https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/cloud-storage.
 4. When asked `Do you want to schedule urls to be scraped repetitively?(y/n)` enter `y`.
 5. Next you have to select frequency. 
    * If you choose `Daily`, you will need to enter hour scraping jobs will run each day.
@@ -112,4 +112,4 @@ We do support only AWS S3 or Google Cloud Storage for now.
 
 *Image of wizard for reference*
 
-![img_3.png](images/img_3.png)
+![img_5.png](images/img_5.png)
