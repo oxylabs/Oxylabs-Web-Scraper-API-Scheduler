@@ -13,8 +13,8 @@ DEFAULT_PAYLOAD_PATH = "runtime_files/payload.json"
 
 if __name__ == "__main__":
     load_dotenv()
-    creds_username = os.environ.get("OXY_USERNAME") or utils.ask("Oxylabs Username:")
-    creds_password = os.environ.get("OXY_PASSWORD") or utils.ask("Oxylabs Password:")
+    creds_username = os.environ.get("OXY_USERNAME") or utils.secure_ask("Oxylabs Username:")
+    creds_password = os.environ.get("OXY_PASSWORD") or utils.secure_ask("Oxylabs Password:")
     env_file_path = Path(".env")
     env_file_path.touch()
     set_key(env_file_path, key_to_set="OXY_USERNAME", value_to_set=creds_username)

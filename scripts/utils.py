@@ -1,6 +1,7 @@
 import json
 import logging
 from typing import Optional
+from getpass import getpass
 
 logger = logging.getLogger(__name__)
 
@@ -39,6 +40,11 @@ def check_if_error(response: dict) -> Optional[list]:
 def ask(text: str) -> str:
     print(f"\033[1m{text}\033[0m")
     return input().strip()
+
+
+def secure_ask(text: str) -> str:
+    print(f"\033[1m{text}\033[0m")
+    return getpass("").strip()
 
 
 def get_user_choice(prompt: str, options: list) -> int:
