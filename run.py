@@ -6,7 +6,7 @@ from dotenv import load_dotenv, set_key
 from scripts import scrape, utils
 
 STORAGE = ["local", "cloud"]
-SCHEDULER_OPTIONS = ["daily", "weekly", "monthly"]
+SCHEDULER_OPTIONS = ["every minute", "daily", "weekly", "monthly"]
 DEFAULT_URLS_PATH = "runtime_files/urls.txt"
 DEFAULT_PAYLOAD_PATH = "runtime_files/payload.json"
 
@@ -71,45 +71,46 @@ if __name__ == "__main__":
                     "frequency": SCHEDULER_OPTIONS[
                         utils.get_user_choice(
                             "Select frequency.",
-                            ["Daily", "Weekly", "Monthly"],
+                            ["Every Minute", "Daily", "Weekly", "Monthly"],
                         )
                     ]
                 }
             )
-            params.update(
-                {
-                    "time": utils.ask(
-                        "Specify hour of the day you wish to run scraping (e.g. 12):",
-                    ),
-                }
-            )
-            if params["frequency"] == "weekly":
+            if params["frequency"] != "every minute":
                 params.update(
                     {
-                        "weekday": utils.get_user_choice(
-                            "Select on which day it should run.",
-                            [
-                                "Monday",
-                                "Tuesday",
-                                "Wednesday",
-                                "Thursday",
-                                "Friday",
-                                "Saturday",
-                                "Sunday",
-                            ],
-                        )
+                        "time": utils.ask(
+                            "Specify hour of the day you wish to run scraping (e.g. 12):",
+                        ),
                     }
                 )
-            elif params["frequency"] == "monthly":
-                params.update(
-                    {
-                        "month_day": int(
-                            utils.ask(
-                                "Specify day of the month requests should be run:"
+                if params["frequency"] == "weekly":
+                    params.update(
+                        {
+                            "weekday": utils.get_user_choice(
+                                "Select on which day it should run.",
+                                [
+                                    "Monday",
+                                    "Tuesday",
+                                    "Wednesday",
+                                    "Thursday",
+                                    "Friday",
+                                    "Saturday",
+                                    "Sunday",
+                                ],
                             )
-                        )
-                    }
-                )
+                        }
+                    )
+                elif params["frequency"] == "monthly":
+                    params.update(
+                        {
+                            "month_day": int(
+                                utils.ask(
+                                    "Specify day of the month requests should be run:"
+                                )
+                            )
+                        }
+                    )
             params.update(
                 {
                     "end_datetime": utils.ask(

@@ -45,7 +45,9 @@ def _generate_cron_expression(params: dict) -> str:
     frequency = params.get("frequency")
     hour = params.get("time")
     cron_expression = ""
-    if frequency == "daily":
+    if frequency == "every minute":
+        cron_expression = "* * * * *"
+    elif frequency == "daily":
         cron_expression = f"0 {hour} * * *"
     elif frequency == "weekly":
         weekday = params.get("weekday")
