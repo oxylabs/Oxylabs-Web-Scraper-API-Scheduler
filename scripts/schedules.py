@@ -17,7 +17,7 @@ def _get_schedules(params: dict) -> list:
 
 def _deactivate_schedule(schedule_id: str, params: dict) -> None:
     requests.request(
-        "GET",
+        "PUT",
         f"https://data.oxylabs.io/v1/schedules/{schedule_id}/state",
         auth=(params["creds_username"], params["creds_password"]),
         json={"active": False},
