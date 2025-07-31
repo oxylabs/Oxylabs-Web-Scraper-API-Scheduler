@@ -106,6 +106,9 @@ We do support only AWS S3 or Google Cloud Storage for now.
 
 ![img_2.png](images/img_2.png)
 
+#### Optimize cloud storage.
+When saving your scraping results in cloud storage, you can also define dynamic file and folder names. This allows you to include {source}, {query}, {job_id}, and {extension} directly in your specified cloud path (e.g., s3://your.bucket/{{ source }}_{{ query }}.json). For more information on how to utilize this feature, check out [File name templating](https://developers.oxylabs.io/scraping-solutions/web-scraper-api/features/result-processing-and-storage/cloud-storage/file-name-templating) documentation.
+
 ## Stopping scheduler
 1. Initiate `run.py` script.
    ```
