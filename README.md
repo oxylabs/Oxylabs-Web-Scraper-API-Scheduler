@@ -74,7 +74,7 @@ Steps:
 
 #### Store completed jobs in cloud
 
-We do support only AWS S3 or Google Cloud Storage for now.
+We support AWS S3, Google Cloud Storage, Alibaba Cloud OSS, adn other S3-compatible destinations.
 1. Initiate `run.py` script.
    ```
    python3.9 run.py
