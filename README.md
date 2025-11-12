@@ -43,10 +43,10 @@
 
 ## Setting up Scraper API
 
-The only thing you need to set it up is to prepare a list of URLs and payload of Scraper API parameters which can be generated in our playground. Below you will find general steps to run our Scraper API and a few examples of different options you have to run it.
+The only thing you need to set it up is to prepare a list of URLs and payload of the API parameters which can be generated in our Web Scraper API Playground. Below you will find general steps to run our Scraper API and a few examples of different options you have to run it.
 
 Steps:
-1. Generate payload by describing your scraping needs in Oxy playground (https://dashboard.oxylabs.io/?route=/api-playground).
+1. Generate payload by describing your scraping needs in Web Scraper API Playground (https://dashboard.oxylabs.io/?route=/api-playground).
 2. Copy payload and store it either in `runtime_files/payload.json` or as a new file on your device.
 ![img_4.png](images/img_4.png)
 3. Store URLs you wish to scrape in `runtime_files/urls.txt` or as a new file on your device. Each url must be separated by newline.
