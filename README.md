@@ -80,7 +80,7 @@ We support AWS S3, Google Cloud Storage, Alibaba Cloud OSS, and other S3-compati
    python3.9 run.py
    ```
 2. When asked `Select where you wish to store the results.` enter `2` to choose `Cloud`.
-3. When asked `Path to cloud bucket and directory/partition where results should be stored:` enter path to your cloud directory where completed jobs should be stored. Bucket permissions should be adjust by using these instructions - https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/cloud-storage.
+3. When asked `Path to cloud bucket and directory/partition where results should be stored:` enter path to your cloud directory where completed jobs should be stored. Bucket permissions should be adjust by using these instructions - https://developers.oxylabs.io/products/web-scraper-api/features/result-processing-and-storage/cloud-storage.
 4. When asked `Do you want to schedule urls to be scraped repetitively?(y/n)` enter `n` as now we just want to scrape all URLs once.
 
 *Image of wizard for reference*
@@ -93,7 +93,7 @@ We support AWS S3, Google Cloud Storage, Alibaba Cloud OSS, and other S3-compati
    python3.9 run.py
    ```
 2. When asked `Select where you wish to store the results.` enter `2` to choose `Cloud`.
-3. When asked `Path to cloud bucket and directory/partition where results should be stored:` enter path to your cloud directory where completed jobs should be stored. Bucket permissions should be adjust by using these instructions - https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/cloud-storage.
+3. When asked `Path to cloud bucket and directory/partition where results should be stored:` enter path to your cloud directory where completed jobs should be stored. Bucket permissions should be adjust by using these instructions - https://developers.oxylabs.io/products/web-scraper-api/features/result-processing-and-storage/cloud-storage.
 4. When asked `Do you want to schedule urls to be scraped repetitively?(y/n)` enter `y`.
 5. Next you have to select frequency. 
    * If you choose `Daily`, you will need to enter hour scraping jobs will run each day.
@@ -107,7 +107,7 @@ We support AWS S3, Google Cloud Storage, Alibaba Cloud OSS, and other S3-compati
 ![img_2.png](images/img_2.png)
 
 #### Optimize cloud storage.
-When saving your scraping results in cloud storage, you can also define dynamic file and folder names. This allows you to include `{source}`, `{query}`, `{job_id}`, and `{extension}` directly in your specified cloud path (e.g., `s3://your.bucket/{{ source }}_{{ query }}.json`). For more information on how to utilize this feature, check out [File name templating](https://developers.oxylabs.io/scraping-solutions/web-scraper-api/features/result-processing-and-storage/cloud-storage/file-name-templating) documentation.
+When saving your scraping results in cloud storage, you can also define dynamic file and folder names. This allows you to include `{source}`, `{query}`, `{job_id}`, and `{extension}` directly in your specified cloud path (e.g., `s3://your.bucket/{{ source }}_{{ query }}.json`). For more information on how to utilize this feature, check out [File name templating](https://developers.oxylabs.io/products/web-scraper-api/features/result-processing-and-storage) documentation.
 
 ## Stopping scheduler
 1. Initiate `run.py` script.
